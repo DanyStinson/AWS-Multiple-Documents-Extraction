@@ -22,7 +22,7 @@ To extract data from xlsx files we are going to create a lambda function with ad
 
 #### Step 2, Create and add Lambda Layers
   * Inside the AWS Lambda service, head to Layers --> Create Layer
-  * Create a new layer uploading the following [.zip file](../layers/Excel-Layer.zip), and select x86_64 as compatible architecture and Python 3.8 as compatible runtime.
+  * Create a new layer uploading the following [.zip file](src/layers/Excel-Layer.zip), and select x86_64 as compatible architecture and Python 3.8 as compatible runtime.
   * Return to your function and in your layers section, select **Add Layer**
     * Select your layer which will be available at the Custom AWS layers dropdown.
     * We are also going to add additional layers, but we are going to add them specifying an ARN
