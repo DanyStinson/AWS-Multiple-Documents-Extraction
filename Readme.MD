@@ -7,7 +7,7 @@ Documents contain valuable information and come in. In most cases, you are manua
 Information we receive may also come in .docx or .xlsx format, which are not currently supported by Amazon Textract. Nevertherless, thanks to **AWS Lambda** and different extraction libraries, we can process the data that resides in these documents. I will leave you the MVP code (**REMEMBER, NOT PRODUCTION READY**) for you to begin your text extraction journey. 
 
 ### What do I need?
-**AWS Account** If you don't already have an account or you have not been handed one as part of a workshop, please visit the following link! 
+**AWS Account** If you don't already have an account or you have not been handed one as part of a workshop, please visit the following [link](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=header_signup&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start)! 
 
 ## Extracting data from Excel files
 To extract data from xlsx files we are going to create a lambda function with additional libraries for manipulation. 
@@ -18,6 +18,7 @@ To extract data from xlsx files we are going to create a lambda function with ad
  * [Launch](https://eu-west-1.console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/create/review?templateURL=https://aidemos-document-extraction.s3.eu-west-1.amazonaws.com/excel-extraction.yaml&stackName=ExcelExtract) the following **AWS CloudFormation Template** in your account (The link will automatically open the AWS CloudFormation console). **THIS TEMPLATE IS TO BE DEPLOYED IN EU-WEST-1 REGION ONLY**
   * You will have to fill some parameters, make sure you insert unique names for your resources, check the AWS CloudFormation acknowledgements and click Create stack.
   * Wait until the stack goes into the **CREATE_COMPLETE** status.
+  * You can now head over to the AWS Lambda service and will find your new function 
 
 #### Step 2, Create and add Lambda Layers
   * Inside the AWS Lambda service, head to Layers --> Create Layer
@@ -48,6 +49,7 @@ To extract data from .docx files we are going to create a lambda function with a
  * [Launch](https://eu-west-1.console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/create/review?templateURL=https://aidemos-document-extraction.s3.eu-west-1.amazonaws.com/docx-extraction.yaml&stackName=DocxExtract) the following **AWS CloudFormation Template** in your account (The link will automatically open the AWS CloudFormation console).**THIS TEMPLATE IS TO BE DEPLOYED IN EU-WEST-1 REGION ONLY**
   * You will have to fill some parameters, make sure you insert unique names for your resources, check the AWS CloudFormation acknowledgements and click Create stack.
   * Wait until the stack goes into the **CREATE_COMPLETE** status.
+  * You can now head over to the AWS Lambda service and will find your new function
 
 #### Step 2, Add Lambda Layers
  * Inside your function, in your layers section, select **Add Layer**
