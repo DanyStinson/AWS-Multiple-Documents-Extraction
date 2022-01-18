@@ -1,0 +1,5 @@
+.idea*
+src/.DS_Store
+src/functions/Excel-Extraction/.DS_Store
+src/.gitattributes
+.DS_Store
